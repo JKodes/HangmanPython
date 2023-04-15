@@ -8,6 +8,11 @@ import random
 
 chosen_word = random.choice(python_fundamentals)
 
+display = []
+for _ in range(len(chosen_word)):
+    display += "_"
+print(display)
+
 
 
 guess = input("Guess a letter: ").lower()
