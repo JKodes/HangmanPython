@@ -7,7 +7,7 @@ python_fundamentals = ['strings', 'integers', 'float', 'Boolean', 'arrays', 'dic
 import random
 
 chosen_word = random.choice(python_fundamentals)
-
+lives = 6
 display = []
 word_length = len(chosen_word)
 for _ in range(word_length):
@@ -24,11 +24,14 @@ while not end_of_game:
         if letter == guess:
             display[position] = letter
 
-    print(display)
-
-
+if guess not in chosen_word:
+    lives -= 1
+    if lives == 0:
+        end_of_game = True
+        print("You lose")
+        
     if "_" not in display:
         end_of_game == True
-        print("You when win")
+        print("You win")
 
     
