@@ -9,7 +9,8 @@ import random
 chosen_word = random.choice(python_fundamentals)
 
 display = []
-for _ in range(len(chosen_word)):
+word_length = len(chosen_word)
+for _ in range(word_length):
     display += "_"
 print(display)
 
@@ -17,8 +18,10 @@ print(display)
 
 guess = input("Guess a letter: ").lower()
 
-for letter in chosen_word:
+for position in range(word_length):
+    letter = chosen_word[position]
     if letter == guess:
-        print("Right")
-    else:
-        print("Wrong")
+        display[position] = letter
+
+print(display)
+    
