@@ -1,12 +1,11 @@
 
 
 
-python_fundamentals = ['strings', 'integers', 'float', 'Boolean', 'arrays', 'dictionary', 'set', 'tuples', 
-                       'function', 'while loop', 'for loop', 'if statment']
+import wordslist
 
 import random
 
-chosen_word = random.choice(python_fundamentals)
+chosen_word = random.choice(wordslist.python_fundamentals)
 lives = 6
 display = []
 word_length = len(chosen_word)
@@ -29,9 +28,12 @@ if guess not in chosen_word:
     if lives == 0:
         end_of_game = True
         print("You lose")
-        
+
     if "_" not in display:
         end_of_game == True
         print("You win")
+
+    import hangmanart
+    print(hangmanart.stages)
 
     
