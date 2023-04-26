@@ -7,6 +7,10 @@ import random
 
 chosen_word = random.choice(wordslist.python_fundamentals)
 lives = 6
+
+from hangmanart import logo, stages
+print(logo)
+
 display = []
 word_length = len(chosen_word)
 for _ in range(word_length):
@@ -34,6 +38,6 @@ if guess not in chosen_word:
         print("You win")
 
     import hangmanart
-    print(hangmanart.stages)
+    print(stages[lives])
 
     
