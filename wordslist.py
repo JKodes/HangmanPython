@@ -17,6 +17,6 @@ python_fundamentals = [
 'class',
 'init',
 'module',
-'lamba',,
+'lamba',
 'pythonic'
 ]
